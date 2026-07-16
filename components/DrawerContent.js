@@ -86,6 +86,11 @@ const menuItems = [
     route: "/animations/mobile-input",
     slug: "mobile-input",
   },
+  {
+    label: "Expandable Mini Player",
+    route: "/animations/expandable-mini-player",
+    slug: "expandable-mini-player",
+  }
 ].sort((a, b) => a.label.localeCompare(b.label));
 
 const GradientColors = ["#030303", "#03030300"];

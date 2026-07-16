@@ -22,17 +22,17 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useSetScreenTheme } from '../../../utils/ScreenThemeContext';
+import useSetScreenTheme from '../../../utils/ScreenThemeContext';
 
 const { width } = Dimensions.get('window');
 
 // ─── Config ──────────────────────────────────────────────────────────────────
 
 const TABS = [
-  { key: 'home',          label: 'Home',    icon: 'house.fill',    ionicon: 'home' },
-  { key: 'search',        label: 'Search',  icon: 'magnifyingglass', ionicon: 'search' },
-  { key: 'library',       label: 'Library', icon: 'books.vertical.fill', ionicon: 'library' },
-  { key: 'profile',       label: 'Profile', icon: 'person.crop.circle.fill', ionicon: 'person-circle' },
+  { key: 'home', label: 'Home', icon: 'house.fill', ionicon: 'home' },
+  { key: 'search', label: 'Search', icon: 'magnifyingglass', ionicon: 'search' },
+  { key: 'library', label: 'Library', icon: 'books.vertical.fill', ionicon: 'library' },
+  { key: 'profile', label: 'Profile', icon: 'person.crop.circle.fill', ionicon: 'person-circle' },
 ];
 
 const TAB_BAR_HEIGHT = 64;
@@ -157,15 +157,15 @@ function TabButton({ tab, index, activeIndex, tabW, onPress }) {
 // ─── Screen content ───────────────────────────────────────────────────────────
 
 const SCREEN_COLORS = {
-  home:    ['#f0f4ff', '#e8edf8'],
-  search:  ['#f5f0ff', '#ede8f8'],
+  home: ['#f0f4ff', '#e8edf8'],
+  search: ['#f5f0ff', '#ede8f8'],
   library: ['#f0fff4', '#e8f8ed'],
   profile: ['#fff8f0', '#f8f0e8'],
 };
 
 const CARD_COLORS = {
-  home:    ['#dde8ff', '#c8d8f8'],
-  search:  ['#e8d8ff', '#d8c8f8'],
+  home: ['#dde8ff', '#c8d8f8'],
+  search: ['#e8d8ff', '#d8c8f8'],
   library: ['#d8ffe8', '#c8f8d8'],
   profile: ['#ffe8d8', '#f8d8c8'],
 };

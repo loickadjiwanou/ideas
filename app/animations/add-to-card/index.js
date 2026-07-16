@@ -18,7 +18,7 @@ import BottomSheet from "./components/bottom-sheet";
 import ConfirmButton from "./components/confirm-button";
 import ListItem from "./components/list-item";
 import CustomHeader from "../../../components/CustomHeader";
-import { useSetScreenTheme } from "../../../utils/ScreenThemeContext";
+import useSetScreenTheme from "../../../utils/ScreenThemeContext";
 
 const items = new Array(20).fill(0).map((_, index) => ({
   id: index,
@@ -35,7 +35,7 @@ export default function AddToCart() {
 
   useFocusEffect(
     useCallback(() => {
-      return () => {};
+      return () => { };
     }, [])
   );
 

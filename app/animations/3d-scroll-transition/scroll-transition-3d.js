@@ -7,7 +7,7 @@ import Animated, {
 } from "react-native-reanimated";
 import BlurredListItem from "./blurred-list-item";
 import CustomHeader from "../../../components/CustomHeader";
-import { useSetScreenTheme } from "../../../utils/ScreenThemeContext";
+import useSetScreenTheme from "../../../utils/ScreenThemeContext";
 
 const NUMBERS_ARRAY = new Array(100)
   .fill(0)
@@ -19,7 +19,7 @@ export const ScrollTransition3D = memo(() => {
 
   useFocusEffect(
     useCallback(() => {
-      return () => {};
+      return () => { };
     }, [])
   );
 

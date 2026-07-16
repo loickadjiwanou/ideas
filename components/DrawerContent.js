@@ -90,6 +90,11 @@ const menuItems = [
     label: "Expandable Mini Player",
     route: "/animations/expandable-mini-player",
     slug: "expandable-mini-player",
+  },
+  {
+    label: "Verification Code Face",
+    route: "/animations/verification-code-face",
+    slug: "verification-code-face",
   }
 ].sort((a, b) => a.label.localeCompare(b.label));
 

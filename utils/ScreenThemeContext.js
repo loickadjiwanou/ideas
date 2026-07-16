@@ -3,7 +3,7 @@ import { useFocusEffect } from "expo-router";
 
 const ScreenThemeContext = createContext({
   theme: "light",
-  setTheme: () => {},
+  setTheme: () => { },
 });
 
 export function ScreenThemeProvider({ children }) {
@@ -29,7 +29,7 @@ export function useScreenTheme() {
  * "light" = dark background → white icons/text
  * "dark"  = light background → black icons/text
  */
-export function useSetScreenTheme(screenTheme) {
+export default function useSetScreenTheme(screenTheme) {
   const { setTheme } = useScreenTheme();
 
   useFocusEffect(

@@ -21,7 +21,7 @@ import Animated, {
   withSpring,
   withTiming,
 } from 'react-native-reanimated';
-import { useSetScreenTheme } from '../../../utils/ScreenThemeContext';
+import useSetScreenTheme from '../../../utils/ScreenThemeContext';
 import { useFocusEffect } from 'expo-router';
 
 const { width, height } = Dimensions.get('window');

@@ -15,7 +15,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import CustomHeader from "../../../components/CustomHeader";
 import { AppAssets } from "../../../utils/app-assets";
-import { useSetScreenTheme } from "../../../utils/ScreenThemeContext";
+import useSetScreenTheme from "../../../utils/ScreenThemeContext";
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 const HEADER_HEIGHT = Math.round(SCREEN_HEIGHT * 0.45);

@@ -19,14 +19,14 @@ import Animated, {
 import CustomHeader from "../../../components/CustomHeader";
 import ActionTrayComponent from "./components/ActionTray";
 import Palette from "./constants/palette";
-import { useSetScreenTheme } from "../../../utils/ScreenThemeContext";
+import useSetScreenTheme from "../../../utils/ScreenThemeContext";
 
 export default function ActionTray() {
   useSetScreenTheme("dark");
 
   useFocusEffect(
     useCallback(() => {
-      return () => {};
+      return () => { };
     }, [])
   );
 

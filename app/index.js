@@ -5,7 +5,7 @@ import { useRef, useCallback, useEffect } from "react";
 import CustomHeader from "../components/CustomHeader";
 import StaggeredText from "./animations/staggered-text/staggered-text";
 import { DeviceWidth, DeviceHeight } from "../utils/device-dimensions";
-import { useSetScreenTheme } from "../utils/ScreenThemeContext";
+import useSetScreenTheme from "../utils/ScreenThemeContext";
 import triggerHaptic from "../utils/haptics";
 
 export default function Main() {

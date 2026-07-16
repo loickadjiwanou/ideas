@@ -7,7 +7,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import { useFocusEffect } from 'expo-router';
-import { useSetScreenTheme } from '../../../utils/ScreenThemeContext';
+import useSetScreenTheme from '../../../utils/ScreenThemeContext';
 import triggerHaptic from '../../../utils/haptics';
 import Blob from './blob';
 import { COLOR_THEMES } from '../../../constants/blob-morphing';

@@ -6,17 +6,21 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { MeasurementLayer } from "./components/measurement-layer";
 import { PanelStack } from "./components/panel-stack";
 import { TabToolbar } from "./components/tab-toolbar";
-import { useCardMorph } from "./hooks/use-card-morph";
-import { useDynamicLayout } from "./hooks/use-dynamic-layout";
-import { useNavItems } from "./hooks/use-nav-items";
-import { usePopupRenderer } from "./hooks/use-popup-renderer";
-import { useViewTransition } from "./hooks/use-view-transition";
+import useCardMorph from "./hooks/use-card-morph";
+import useDynamicLayout from "./hooks/use-dynamic-layout";
+import useNavItems from "./hooks/use-nav-items";
+import usePopupRenderer from "./hooks/use-popup-renderer";
+import useViewTransition from "./hooks/use-view-transition";
 import { layoutStyles as styles } from "./utils/layout-styles";
-import { palette } from "./utils/palette";
-import { estimateToolbarWidth } from "./utils/toolbar-width";
+import palette from "./utils/palette";
+import estimateToolbarWidth from "./utils/toolbar-width";
 
-export default memo(function AnimatedTabBar({ props }) {
-  const { descriptors, navigation, renderPopupBody, state } = props;
+export default memo(function AnimatedTabBar({
+  descriptors,
+  navigation,
+  state,
+  renderPopupBody,
+}) {
   const insets = useSafeAreaInsets();
   const scheme = (useColorScheme() ?? "light");
   const colors = useMemo(() => palette(scheme), [scheme]);

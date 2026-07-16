@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { View, Button } from "react-native";
 import TicketCardModal from "./ticket-card-modal";
 import { useFocusEffect } from "expo-router";
-import { useSetScreenTheme } from "../../../utils/ScreenThemeContext";
+import useSetScreenTheme from "../../../utils/ScreenThemeContext";
 
 const TicketCardExample = () => {
   useSetScreenTheme("dark");
@@ -10,7 +10,7 @@ const TicketCardExample = () => {
 
   useFocusEffect(
     useCallback(() => {
-      return () => {};
+      return () => { };
     }, []),
   );
 

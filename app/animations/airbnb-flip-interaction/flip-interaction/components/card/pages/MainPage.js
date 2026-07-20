@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import spacing from "../../../../constants";
 
-const MainPage = () => {
+export const MainPage = () => {
   return (
     <View style={styles.container}>
       <View style={styles.section}>
@@ -48,5 +48,3 @@ const styles = StyleSheet.create({
     marginBottom: spacing.s,
   },
 });
-
-export default MainPage;

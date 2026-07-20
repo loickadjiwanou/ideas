@@ -16,12 +16,11 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 
-import CustomHeader from "../../../components/CustomHeader";
-import ActionTrayComponent from "./components/ActionTray";
-import Palette from "./constants/palette";
-import useSetScreenTheme from "../../../utils/ScreenThemeContext";
+import { ActionTrayComponent } from "./components/ActionTray";
+import { Palette } from "./constants/palette";
+import { useSetScreenTheme } from "../../../utils/ScreenThemeContext";
 
-export default function ActionTray() {
+export const ActionTray = () => {
   useSetScreenTheme("dark");
 
   useFocusEffect(

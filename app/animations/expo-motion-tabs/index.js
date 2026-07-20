@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import AnimatedTabBar from "./motion-tabs/animated-tab-bar";
 import CustomHeader from "../../../components/CustomHeader";
-import useSetScreenTheme from "../../../utils/ScreenThemeContext";
+import { useSetScreenTheme } from "../../../utils/ScreenThemeContext";
 
 const Tab = createBottomTabNavigator();
 

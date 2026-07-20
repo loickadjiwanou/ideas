@@ -15,7 +15,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { DeviceWidth } from "../utils/device-dimensions";
 import { AppAssets } from "../utils/app-assets";
-import triggerHaptic from "../utils/haptics";
+import { triggerHaptic } from "../utils/haptics";
 
 const DrawerContentWidth = DeviceWidth * 0.75;
 
@@ -95,7 +95,12 @@ const menuItems = [
     label: "Verification Code Face",
     route: "/animations/verification-code-face",
     slug: "verification-code-face",
-  }
+  },
+  {
+    label: "Floating Bottom Bar",
+    route: "/animations/floating-bottom-bar",
+    slug: "floating-bottom-bar",
+  },
 ].sort((a, b) => a.label.localeCompare(b.label));
 
 const GradientColors = ["#030303", "#03030300"];
@@ -111,7 +116,7 @@ const DrawerListItem = ({ item, style, onPress }) => {
 
 const keyExtractor = (item) => item?.slug || "";
 
-export default function DrawerContent(props) {
+const DrawerContent = (props) => {
   const router = useRouter();
   const { top, bottom } = useSafeAreaInsets();
   const [searchFilter, setSearchFilter] = useState("");
@@ -295,3 +300,5 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
 });
+
+export default DrawerContent;

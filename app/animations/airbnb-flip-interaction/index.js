@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, View } from "react-native";
 import { useState } from "react";
-import useSetScreenTheme from "../../../utils/ScreenThemeContext";
+import { useSetScreenTheme } from "../../../utils/ScreenThemeContext";
 import { BlurView } from "expo-blur";
 import { LinearGradient } from "expo-linear-gradient";
 import { PressableOpacity } from "pressto";

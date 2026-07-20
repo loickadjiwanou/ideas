@@ -5,7 +5,7 @@ import Orb from './components/Orb';
 import MicButton from './components/MicButton';
 import RecordingsList from './components/RecordingsList';
 import { useVoiceRecording } from './hooks/useVoiceRecording';
-import triggerHaptic from '../../../utils/haptics';
+import { triggerHaptic } from '../../../utils/haptics';
 
 export default function VoiceChatOrb({
   onRecordingComplete,

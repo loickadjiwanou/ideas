@@ -22,7 +22,7 @@ import Animated, {
 
 const ManropeRegular = require("../../../assets/fonts/ManropeRegular.otf");
 
-export default function BlurredListItem({ text, size, index, scrollY }) {
+export const BlurredListItem = ({ text, size, index, scrollY }) => {
   const inputRange = useMemo(
     () => [
       size * (index - 1),

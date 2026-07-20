@@ -5,10 +5,10 @@ import { useRef, useCallback, useEffect } from "react";
 import CustomHeader from "../components/CustomHeader";
 import StaggeredText from "./animations/staggered-text/staggered-text";
 import { DeviceWidth, DeviceHeight } from "../utils/device-dimensions";
-import useSetScreenTheme from "../utils/ScreenThemeContext";
-import triggerHaptic from "../utils/haptics";
+import { useSetScreenTheme } from "../utils/ScreenThemeContext";
+import { triggerHaptic } from "../utils/haptics";
 
-export default function Main() {
+const Main = () => {
   useSetScreenTheme("light");
 
   useFocusEffect(
@@ -88,3 +88,5 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
 });
+
+export default Main;

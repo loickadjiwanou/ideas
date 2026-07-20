@@ -5,9 +5,8 @@ import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from "react-native-reanimated";
-import BlurredListItem from "./blurred-list-item";
-import CustomHeader from "../../../components/CustomHeader";
-import useSetScreenTheme from "../../../utils/ScreenThemeContext";
+import { BlurredListItem } from "./blurred-list-item";
+import { useSetScreenTheme } from "../../../utils/ScreenThemeContext";
 
 const NUMBERS_ARRAY = new Array(100)
   .fill(0)
@@ -94,5 +93,3 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
-
-export default ScrollTransition3D;

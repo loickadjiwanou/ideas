@@ -1,4 +1,9 @@
-import React, { createContext, useCallback, useContext, useState } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useState,
+} from "react";
 import { useFocusEffect } from "expo-router";
 
 const ScreenThemeContext = createContext({
@@ -6,7 +11,7 @@ const ScreenThemeContext = createContext({
   setTheme: () => { },
 });
 
-export function ScreenThemeProvider({ children }) {
+export const ScreenThemeProvider = ({ children }) => {
   const [theme, setThemeState] = useState("light");
 
   const setTheme = useCallback((t) => {
@@ -18,26 +23,22 @@ export function ScreenThemeProvider({ children }) {
       {children}
     </ScreenThemeContext.Provider>
   );
-}
+};
 
-export function useScreenTheme() {
+export const useScreenTheme = () => {
   return useContext(ScreenThemeContext);
-}
+};
 
-/**
- * Call this in a screen to declare its background theme.
- * "light" = dark background → white icons/text
- * "dark"  = light background → black icons/text
- */
-export default function useSetScreenTheme(screenTheme) {
+export const useSetScreenTheme = (screenTheme) => {
   const { setTheme } = useScreenTheme();
 
   useFocusEffect(
     useCallback(() => {
       setTheme(screenTheme);
+
       return () => {
         setTheme("light");
       };
-    }, [screenTheme, setTheme]),
+    }, [screenTheme, setTheme])
   );
-}
+};

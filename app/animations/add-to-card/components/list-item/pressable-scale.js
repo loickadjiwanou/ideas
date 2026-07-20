@@ -6,7 +6,7 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 
-const PressableScale = memo(({ children, onPress, style, ...props }) => {
+export const PressableScale = memo(({ children, onPress, style, ...props }) => {
   const scale = useSharedValue(1);
 
   const tapGesture = Gesture.Tap()
@@ -37,5 +37,3 @@ const PressableScale = memo(({ children, onPress, style, ...props }) => {
     </GestureDetector>
   );
 });
-
-export default PressableScale;

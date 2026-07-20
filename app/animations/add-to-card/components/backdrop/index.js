@@ -6,7 +6,7 @@ import Animated, {
   useDerivedValue,
 } from "react-native-reanimated";
 
-const Backdrop = memo(({ animationProgress, onPress }) => {
+export const Backdrop = memo(({ animationProgress, onPress }) => {
   const isActive = useDerivedValue(() => {
     return animationProgress.value > 0;
   }, []);
@@ -37,5 +37,3 @@ const Backdrop = memo(({ animationProgress, onPress }) => {
     />
   );
 });
-
-export default Backdrop;

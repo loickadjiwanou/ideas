@@ -71,7 +71,7 @@ function buildD(radii, scale) {
 // Component
 // ---------------------------------------------------------------------------
 
-export default function Blob({ morphTime, colors }) {
+const Blob = ({ morphTime, colors }) => {
   // Outer ambient ring (largest, most transparent)
   const outerGlowProps = useAnimatedProps(() => {
     const radii = computeRadii(morphTime.value);
@@ -122,3 +122,5 @@ export default function Blob({ morphTime, colors }) {
     </Svg>
   );
 }
+
+export default Blob;

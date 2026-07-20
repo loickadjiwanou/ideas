@@ -7,7 +7,7 @@ import {
   useDerivedValue,
 } from "react-native-reanimated";
 
-const ConfirmButton = memo(
+export const ConfirmButton = memo(
   ({ animationProgress, layoutData, style, children, onConfirm }) => {
     const { height: SCREEN_HEIGHT, width: SCREEN_WIDTH } =
       useWindowDimensions();
@@ -82,5 +82,3 @@ const ConfirmButton = memo(
     );
   }
 );
-
-export default ConfirmButton;

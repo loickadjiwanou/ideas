@@ -10,7 +10,7 @@ import Animated, {
 import { scheduleOnRN } from "react-native-worklets";
 import PressableScale from "./pressable-scale";
 
-const ListItem = ({
+export const ListItem = ({
   index,
   item,
   onTap,
@@ -125,5 +125,3 @@ const styles = StyleSheet.create({
     zIndex: 100,
   },
 });
-
-export default ListItem;

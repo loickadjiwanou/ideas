@@ -9,7 +9,7 @@ import Animated, {
 const BOTTOM_SHEET_OFFSET = 100;
 const BOTTOM_SHEET_HEIGHT = 200 + BOTTOM_SHEET_OFFSET;
 
-const BottomSheet = memo(({ animationProgress }) => {
+export const BottomSheet = memo(({ animationProgress }) => {
   const rBottomSheetStyle = useAnimatedStyle(() => {
     const translateY = interpolate(
       animationProgress.value,
@@ -67,5 +67,3 @@ const styles = StyleSheet.create({
     right: 0,
   },
 });
-
-export default BottomSheet;

@@ -45,5 +45,3 @@ export async function triggerHaptic(level = 'medium') {
         console.warn('Haptics non disponible :', e?.message);
     }
 }
-
-export default triggerHaptic;

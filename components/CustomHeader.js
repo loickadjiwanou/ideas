@@ -9,10 +9,10 @@ import Animated, {
   withTiming,
   interpolate,
 } from "react-native-reanimated";
-import triggerHaptic from "../utils/haptics";
+import { triggerHaptic } from "../utils/haptics";
 import { useScreenTheme } from "../utils/ScreenThemeContext";
 
-export default function CustomHeader({ title, titleColor, iconColor }) {
+const CustomHeader = ({ title, titleColor, iconColor }) => {
   const navigation = useNavigation();
   const drawerStatus = useDrawerStatus();
   const rotation = useSharedValue(0);
@@ -92,3 +92,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
+
+export default CustomHeader;

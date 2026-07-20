@@ -4,7 +4,7 @@ import { useFocusEffect } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
 
-export default function App() {
+const Example = () => {
 
     useFocusEffect(
         useCallback(() => {
@@ -39,3 +39,5 @@ export default function App() {
         </View>
     );
 }
+
+export default Example;

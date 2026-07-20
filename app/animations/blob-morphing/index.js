@@ -7,13 +7,13 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import { useFocusEffect } from 'expo-router';
-import useSetScreenTheme from '../../../utils/ScreenThemeContext';
-import triggerHaptic from '../../../utils/haptics';
+import { useSetScreenTheme } from '../../../utils/ScreenThemeContext';
+import { triggerHaptic } from '../../../utils/haptics';
 import Blob from './blob';
 import { COLOR_THEMES } from '../../../constants/blob-morphing';
-import { useMorphAnimation } from '../../../hooks/blob-morphing/useMorphAnimation';
+import useMorphAnimation from '../../../hooks/blob-morphing/useMorphAnimation';
 
-export default function BlobMorphingScreen() {
+const BlobMorphingScreen = () => {
   useSetScreenTheme("light");
   const { morphTime, start } = useMorphAnimation();
   const [themeIndex, setThemeIndex] = useState(0);
@@ -104,3 +104,5 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
 });
+
+export default BlobMorphingScreen;

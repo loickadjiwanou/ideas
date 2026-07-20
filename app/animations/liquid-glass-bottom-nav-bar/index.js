@@ -22,7 +22,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import useSetScreenTheme from '../../../utils/ScreenThemeContext';
+import { useSetScreenTheme } from '../../../utils/ScreenThemeContext';
 
 const { width } = Dimensions.get('window');
 

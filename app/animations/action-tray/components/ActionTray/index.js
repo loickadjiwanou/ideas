@@ -16,7 +16,7 @@ import Backdrop from "./Backdrop";
 
 const { height: SCREEN_HEIGHT } = Dimensions.get("window");
 
-const ActionTrayComponent = forwardRef(
+export const ActionTrayComponent = forwardRef(
   ({ children, style, maxHeight = SCREEN_HEIGHT, onClose }, ref) => {
     const translateY = useSharedValue(maxHeight);
     const MAX_TRANSLATE_Y = -maxHeight;
@@ -123,5 +123,3 @@ const styles = StyleSheet.create({
     width: 75,
   },
 });
-
-export default ActionTrayComponent;

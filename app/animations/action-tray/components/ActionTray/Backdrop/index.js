@@ -8,7 +8,7 @@ import Animated, {
 
 const AnimatedView = Animated.createAnimatedComponent(Animated.View);
 
-function Backdrop({ isActive, onTap }) {
+export const Backdrop = memo(({ isActive, onTap }) => {
   const rBackdropStyle = useAnimatedStyle(() => {
     return {
       opacity: withTiming(isActive.value ? 1 : 0),
@@ -32,6 +32,4 @@ function Backdrop({ isActive, onTap }) {
       ]}
     />
   );
-}
-
-export default memo(Backdrop);
+});

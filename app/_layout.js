@@ -5,7 +5,10 @@ import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import DrawerContent from "../components/DrawerContent";
-import { ScreenThemeProvider, useScreenTheme } from "../utils/ScreenThemeContext";
+import {
+  ScreenThemeProvider,
+  useScreenTheme,
+} from "../utils/ScreenThemeContext";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -44,7 +47,7 @@ function RootDrawer() {
   );
 }
 
-export default function RootLayout() {
+const RootLayout = () => {
   const [fontsLoaded, fontsError] = useFonts({
     manroperegular: require("../assets/fonts/ManropeRegular.otf"),
     manropemedium: require("../assets/fonts/ManropeMedium.otf")
@@ -77,3 +80,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#000",
   },
 });
+
+export default RootLayout;
